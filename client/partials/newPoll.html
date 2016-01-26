@@ -1,0 +1,23 @@
+<div>
+	<a href="#/dashboard" class='pull-right'>Cancel</a>
+	<h3>Put your question and options here:</h3>
+	<form class='form-group'>
+		Question: <input type='text' ng-model='pollCrtl.newPoll.question' class="form-control">
+		Option 1: <input type='text' ng-model='pollCrtl.newPoll.option1' class="form-control">
+		Option 2: <input type='text' ng-model='pollCrtl.newPoll.option2' class="form-control">
+		Option 3: <input type='text' ng-model='pollCrtl.newPoll.option3' class="form-control">
+		Option 4: <input type='text' ng-model='pollCrtl.newPoll.option4' class="form-control">
+		<br>
+		<button class='btn btn-success' ng-click='pollCrtl.addPoll(userCrtl.user[0].name)'>Create Poll</button>
+	</form>
+	<div id='error'>
+		<ul ng-repeat='error in pollCrtl.angularErrors'>
+			<li ng-bind='error'></li>
+		</ul>
+	</div>
+	<ul ng-repeat='error in pollCrtl.errors'>
+		<ul ng-repeat='type in error'>
+		<ul ng-repeat='message in type'></ul>
+			<li ng-bind='type.message'></li>
+		</ul>
+</div>

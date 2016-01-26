@@ -1,0 +1,30 @@
+<div>
+	<a href="#/dashboard" class='pull-right'>Go to Polls</a>
+	<h3><span ng-bind='pollCrtl.poll.question'></span></h3>
+	<p>Click the Vote button to choose one.</p>
+	<table class='table table-bordered'>
+		<th>Option</th>
+		<th>Current Count of Votes</th>
+		<th>Action</th>
+		<tr>
+			<td><span ng-bind='pollCrtl.poll.option1'></span></td>
+			<td><span ng-bind= 'pollCrtl.poll.option1Votes'></span></td>
+			<td><button class='btn btn-info' ng-click='pollCrtl.addVoteOption1(pollCrtl.poll)'>Vote</button></td>
+		</tr>
+			<tr>
+			<td><span ng-bind='pollCrtl.poll.option2'></span></td>
+			<td><span ng-bind= 'pollCrtl.poll.option2Votes'></span></td>
+			<td><button class='btn btn-info' ng-click='pollCrtl.addVoteOption2(pollCrtl.poll)'>Vote</button></td>
+		</tr>
+			<tr>
+			<td><span ng-bind='pollCrtl.poll.option3'></span></td>
+			<td><span ng-bind= 'pollCrtl.poll.option3Votes'></span></td>
+			<td><button class='btn btn-info' ng-click='pollCrtl.addVoteOption3(pollCrtl.poll)'>Vote</button></td>
+		</tr>
+		<tr>
+			<td><span ng-bind='pollCrtl.poll.option4'></span></td>
+			<td><span ng-bind= 'pollCrtl.poll.option4Votes'></span></td>
+			<td><button class='btn btn-info' ng-click='pollCrtl.addVoteOption4(pollCrtl.poll)'>Vote</button></td>
+		</tr>
+	</table>
+</div>
